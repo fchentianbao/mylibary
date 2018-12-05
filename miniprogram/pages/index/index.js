@@ -172,6 +172,9 @@ Page({
       var bookid = event.currentTarget.dataset.id;
       book.doc(bookid).remove({
         success: function (res) {
+          _that.setData({
+            booklist: []
+          });
           _that.onLoad();
         }
       })
