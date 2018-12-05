@@ -1,0 +1,25 @@
+<!--pages/scancode/scancode.wxml-->
+<van-row gutter="20">
+  <van-col offset="8" span="8">
+    <van-button type="primary" bind:click="scanCode">扫码加书</van-button>
+  </van-col>
+</van-row>
+
+ <view wx:if="{{book.title}}"> 
+      <van-card price="{{book.price}}" desc="{{book.author[0]}}" title="{{book.title}}" thumb="{{book.image}}">
+
+    <view slot="tags">
+      <view wx:for="{{book.tags}}" wx:for-index="idx" wx:for-item="itemTag">
+        <view wx:if="{{idx < 2}}">
+          <van-tag type="primary">{{itemTag.name}}</van-tag>
+        </view>
+      </view>
+    </view>
+  </van-card>
+
+    <van-panel title="简介：">
+    <view>{{book.summary}}</view>
+    <van-dialog id="van-dialog" />
+  </van-panel>
+    </view>
+    <view  wx:else> {{addbookerr}} </view>

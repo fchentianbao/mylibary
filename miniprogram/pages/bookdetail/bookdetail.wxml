@@ -1,0 +1,18 @@
+<!--pages/bookdetail/bookdetail.wxml-->
+<view>
+  <van-card price="{{book.price}}" desc="{{book.author[0]}}" title="{{book.title}}" thumb="{{book.image}}">
+
+    <view slot="tags">
+      <view wx:for="{{book.tags}}" wx:for-index="idx" wx:for-item="itemTag">
+        <view wx:if="{{idx < 2}}">
+          <van-tag type="primary">{{itemTag.name}}</van-tag>
+        </view>
+      </view>
+    </view>
+  </van-card>
+
+    <van-panel title="简介：">
+    <view>{{book.summary}}</view>
+  </van-panel>
+
+</view>

@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-button": "../../dist/button/index",
+    "van-row": "../../dist/row/index",
+    "van-col": "../..//dist/col/index",
+    "van-card": "../../dist/card/index",
+    "van-tag": "../../dist/tag/index",
+    "van-panel": "../../dist/panel/index",
+    "van-dialog": "../../dist/dialog/index"
+  }
+}
